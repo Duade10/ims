@@ -34,8 +34,10 @@ ALLOWED_HOSTS = []
 # Application definition
 THIRDPARTY_APPS = [
     'rest_framework',
+    'rest_framework_simplejwt',
 ]
 DJANGO_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,7 +47,8 @@ DJANGO_APPS = [
 ]
 CUSTOM_APPS = [
     'core.apps.CoreConfig',
-    'suppliers.apps.SuppliersConfig'
+    'suppliers.apps.SuppliersConfig',
+    'users.apps.UsersConfig'
 ]
 INSTALLED_APPS = THIRDPARTY_APPS + DJANGO_APPS + CUSTOM_APPS
 
@@ -131,3 +134,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'users.User'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}

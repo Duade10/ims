@@ -8,6 +8,8 @@ django = "==4.2"
 pillow = "*"
 djangorestframework = "*"
 python-dotenv = "*"
+djangorestframework-simplejwt = "*"
+django-jazzmin = "*"
 
 [dev-packages]
 
