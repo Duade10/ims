@@ -6,7 +6,7 @@ from django.utils.text import gettext_lazy as _
 class Supplier(AbstractTimestamp):
     """ Inventory Supplier Model Instance """
 
-    name = models.CharField(_("Supplier"), max_length=100)
+    name = models.CharField(_("Name"), max_length=100)
     contact_information = models.TextField(_("Contact Information"))
 
     class Meta:

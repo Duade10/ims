@@ -48,6 +48,7 @@ DJANGO_APPS = [
 CUSTOM_APPS = [
     'core.apps.CoreConfig',
     'suppliers.apps.SuppliersConfig',
+    'inventoryitems.apps.InventoryitemsConfig',
     'users.apps.UsersConfig'
 ]
 INSTALLED_APPS = THIRDPARTY_APPS + DJANGO_APPS + CUSTOM_APPS

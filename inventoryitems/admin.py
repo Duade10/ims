@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from . import models
+
+
+@admin.register(models.InventoryItem)
+class InventoryItemAdmin(admin.ModelAdmin):
+    list_display = ["name", "price", "date_added"]
