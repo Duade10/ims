@@ -1,9 +1,9 @@
-from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import viewsets, filters
 from rest_framework.decorators import action
 from rest_framework.pagination import PageNumberPagination
+from rest_framework import viewsets, filters
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.authentication import JWTAuthentication
+from django_filters.rest_framework import DjangoFilterBackend
 
 from suppliers.serializers import SupplierSerializer
 from .filters import InventoryItemFilter
