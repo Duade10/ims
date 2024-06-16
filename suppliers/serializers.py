@@ -1,9 +1,9 @@
 from rest_framework import serializers
 
-from . import models
+from .models import Supplier
 
 
 class SupplierSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.Supplier
-        fields = "__all__"
+        model = Supplier
+        fields = '__all__'
